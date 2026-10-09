@@ -292,3 +292,75 @@ h1{
         font-size: 4rem;
     }
 }
+/* =========================================
+   VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================= */
+:root {
+  /* Puedes cambiar este código HEX por el azul exacto que más te guste */
+  --primary-color: #0056b3; 
+  --dark-color: #2c3e50;
+}
+
+html {
+  /* Efecto de deslizamiento suave al navegar por el menú */
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* Evita que el menú fijo tape los títulos de las secciones */
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   SOBRESCRIBIR COLORES DE BOOTSTRAP
+   ========================================= */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+}
+
+/* =========================================
+   AJUSTES DEL CARRUSEL DE PROYECTOS
+   ========================================= */
+.carousel-item img {
+  max-height: 500px; /* Altura máxima para monitores grandes */
+  object-fit: cover; /* Evita que la imagen se deforme */
+  object-position: top;
+}
+
+/* Ajuste sutil para la sombra de las tarjetas al pasar el mouse */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+.email-btn {
+  background-color: #ffffff;
+  color: #212529 !important;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease-in-out;
+}
+
+.email-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #0d6efd;
+  color: #0d6efd !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.email-btn i {
+  color: #0d6efd !important; /* Icono en azul claro */
+}
